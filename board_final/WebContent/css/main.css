@@ -28,9 +28,9 @@
 	.common-tbl caption{margin: 15px 0; font-weight: bold; font-size: 1.5em;}
 	
 	/* join */
-	.join-tbl th, td{padding: 10px; text-align: right; }
-	.join-tbl th { text-align: left;}
-	.join-tbl th span {border-left: 5px solid red; padding: 0 0 4px 15px; border-radius: 5px;}
+	.join-tbl th, .join-tbl td{padding: 10px; text-align: right; }
+	.join-tbl th { text-align: left; width:100px; }
+	.join-tbl th span {width:100px; border-left: 5px solid red; padding: 0 0 4px 15px; border-radius: 5px;}
 	.join-tbl input{font-size:1.1em; width: 360px; padding: 5px; border-radius: 5px;}
 	.join-tbl tr:last-child td {text-align: center;}
 	.join-tbl button {font-size: .8em; padding: 0 20px; margin: 0 25px; border-radius: 5px;}
@@ -48,7 +48,8 @@
 	/* board */
 	
 	.board-tbl {width: 800px; }
-	.board-tbl td, .board-tbl th {width: 133px; font-size: 13px; text-align: center;}
+	.board-tbl th {padding: 10px; width: 133px; font-size: 13px; text-align: center;}
+	.board-tbl td {padding: 10px; width: 133px; font-size: 13px; }
 	.board-tbl th, .board-tbl tbody tr:last-child td {border-bottom:1px solid #333;}
 	.board-tbl th {border-bottom: 1px solid #333;}
 	.board-tbl tr td:nth-child(3){width: 400px; text-align: left;}
@@ -58,7 +59,7 @@
 	.del-all {display: none; border: transparent; text-align: center;}
 	
 	.board-tbl-view tr:first-child td{border-top: 1px solid #333;}
-	.board-tbl-view tbody td {border-bottom:1px solid #333; border-right: 1px solid #333;}
+	.board-tbl-view tbody td {border-bottom:1px solid #333; border: 1px solid #333;}
 	.board-tbl-view th{background: #333; color: #ddd;}
 	.board-tbl-view tr td:nth-child(1n){width: 300px;}
 	.board-tbl-view tr :nth-child(4) td {border-right: 0;}
@@ -86,7 +87,7 @@
  	.reply-tbl td{text-align: center;}
  	td.reply-content {width: 600px; text-align: left; }
  	.reply-del-btn{margin:-4px; }
- 	.rebtl {width: 100%; color: #0e111f; border-radius: 5px;}
+ 	.rebtl {width: 65%; color: #0e111f; border-radius: 5px;}
  	
  	
  	

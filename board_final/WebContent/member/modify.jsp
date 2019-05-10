@@ -41,6 +41,18 @@ window.onload = function(){
 		alert("수정이 완료 되었습니다.");
 	}
 }
+
+$(function(){
+	$("input").keyup(function(){
+		var flag = true;
+		$("input").each(function(){
+			if(!$(this).val().length) flag = false;				
+		});
+		
+		if(flag) $("button").addClass("btn-active")
+		else $("button").removeClass("btn-active")
+	});
+});
 </script>
 </head>
 <body>
@@ -53,15 +65,15 @@ window.onload = function(){
 		<caption>회원 정보 수정</caption>
 		
 		<tr>
-			<th><span>이메일</span></th>
+			<th><span>Email</span></th>
 			<td><input name="email"  placeholder="이메일을 입력하세요" readonly="readonly" value="${member.email}"></td>
 		</tr>
 		<tr>
-			<th><span>비밀번호</span></th>
-			<td><input name="pw" placeholder="4자 이상 입력하세요" type="password"></td>
+			<th><span>Password</span></th>
+			<td><input name="pw" placeholder="6자 이상 입력하세요" type="password"></td>
 		</tr>
 		<tr>
-			<th><span>이름</span></th>
+			<th><span>Name</span></th>
 			<td><input name="name" placeholder="이름을 입력하세요" value="${member.name}"></td>
 		</tr>
 				<tr>

@@ -42,7 +42,7 @@
 			<td colspan="6">
 				<a href="list"><button type="button">목록</button></a>
 				<c:if test="${member.admin || member.idx == board.writerIdx}">
-				<a href="update?idx=${board.idx}"><button type="button" onclick="alert('준비중입니다.'); return false;">수정</button></a>
+				<a href="update?idx=${board.idx}"><button type="button">수정</button></a>
 				<a href="remove?idx=${board.idx}"><button type="button" onclick="return confirm('삭제하시겠습니까?')">삭제</button></a>
 				</c:if>
 			</td>

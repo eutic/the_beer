@@ -14,6 +14,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 <section>
 <form method="post">
+	<input type="hidden" name="idx" value="${board.idx}">
 	<table class="common-tbl board-tbl board-tbl-view">
 		<caption>게시판</caption>
 		<tbody>
@@ -25,14 +26,14 @@
 		
 		<tr>
 			<td colspan="4">
-			<textarea>${board.content}</textarea>
+			<textarea name="content">${board.content}</textarea>
 			</td>
 		</tr>
 		</tbody>
 	<tfoot>
 		<tr>
 			<td colspan="4">
-				<button>수정</button>
+				<button type="submit">수정</button>
 				<button type="reset">취소</button>
 				<a href="list"><button type="button">목록</button></a>
 			</td>

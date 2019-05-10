@@ -26,7 +26,7 @@
 			<li><a href="history">History</a></li>
 			<li><a href="ale">Ale</a></li> 
 			<li><a href="lager">Lager</a></li>
-	 	 	<li><a href="#" onclick="arlert('준비중입니다.'); return false;">Beer Map</a></li>
+	 	 	<li><a href="#" onclick="alert('준비중입니다.'); return false;">Beer Map</a></li>
 			<li><a href="quiz">Quiz</a></li>
 			<li><a href="list">자유게시판</a></li>
 			<li><a href="list?cate=1"class="gnb-last">답글형</a></li>

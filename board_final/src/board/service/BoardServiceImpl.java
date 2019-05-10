@@ -10,7 +10,7 @@ import board.vo.ReplyVo;
 public class BoardServiceImpl implements BoardService {
 
 	static BoardService service = new BoardServiceImpl();
-	private BoardServiceImpl() {}
+	public BoardServiceImpl() {}
 	public static BoardService getInstance() {
 		return service;
 	}

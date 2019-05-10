@@ -10,14 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import member.service.MemberServiceImpl;
 
-
-
 @WebServlet("/isMember")
 public class IsMember extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 				resp.getWriter().print(
-				
 				new MemberServiceImpl().isMember(req.getParameter("id").trim()) ? 1 : 0
 				);
 	}

@@ -180,21 +180,16 @@ public class BoardDao {
 	}
 
 	public void update(Board vo) {
-		// TODO Auto-generated method stub
-		String sql = "UPDATE BOARD_F SET TITLE = ?, CONTENT = ?, REGDATE = SYSDATE WHERE IDX = ?";
-		
+		String sql = " UPDATE BOARD_F SET TITLE = ?, CONTENT = ? , REGDATE=SYSDATE WHERE IDX = ? ";
 		conn = DBManager.getConnection();
 		try {
-			rs = pstmt.executeQuery();
 			pstmt = conn.prepareStatement(sql);
-			int idx = 0;
-			pstmt.setString(idx++, vo.getTitle());
-			pstmt.setString(idx++, vo.getContent());
-			pstmt.setString(idx++, vo.getRegdate());
-			pstmt.setInt(idx++, vo.getIdx());
+			pstmt.setString(1, vo.getTitle());
+			pstmt.setString(2, vo.getContent());
+			pstmt.setInt(3, vo.getIdx());
 			pstmt.executeUpdate();
 			
-			DBManager.close(conn, pstmt, rs);
+			DBManager.close(conn, pstmt);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
